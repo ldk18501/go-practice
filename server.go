@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"goji.io"
 	"goji.io/pat"
@@ -32,7 +33,7 @@ type Person struct {
 }
 
 func main() {
-	session, err := mgo.Dial("localhost:27017")
+	session, err := mgo.Dial(os.Getenv("MONGO_URL"))
 	if err != nil {
 		panic(err)
 	}
