@@ -8,7 +8,7 @@ COPY server.go /code
 
 EXPOSE 8888
 
-RUN apk update && apk add git
+RUN apk update --no-cache && apk add --no-cache git
 
 RUN go get goji.io && go get gopkg.in/mgo.v2
 

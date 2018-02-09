@@ -48,7 +48,7 @@ func main() {
 	mux.HandleFunc(pat.Get("/people/:name"), personByName(session))
 	mux.HandleFunc(pat.Put("/people/:name"), updatePerson(session))
 	//mux.HandleFunc(pat.Delete("/people/:name"), deletePerson(session))
-	http.ListenAndServe("localhost:8888", mux)
+	http.ListenAndServe(":8888", mux)
 }
 
 func allPeople(s *mgo.Session) func(w http.ResponseWriter, r *http.Request) {
