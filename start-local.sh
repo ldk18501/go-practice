@@ -9,5 +9,5 @@ go_mongo_ip=$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' go-mong
 docker run -d \
   -e MONGO_URL=$go_mongo_ip:27017 \
   --name go-server \
-  -p 8888:8080 \
+  -p 8888:8888 \
   go-test
