@@ -6,7 +6,7 @@ WORKDIR /code
 
 COPY server.go /code
 
-EXPOSE 8080
+EXPOSE 8888
 
 RUN apk update && apk add git
 
